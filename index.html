@@ -203,7 +203,9 @@ $(document).ready(function() {
                 if(status === "online" || status === "dnd" || status === "idle")
                 {
                     
-					game1 = member.game.name;
+					if (member.game.name == undefined) game1 = "";
+					else game1=member.game.name;
+					
 					elliotton(true);
                 }else{
                     elliotton(false);
