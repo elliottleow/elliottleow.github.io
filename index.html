@@ -178,7 +178,7 @@ $(document).ready(function() {
 	var elliotton = function (online) {
     if(online)
     {
-        $("#elliottstatus").html('online on discord'); //make red and green button / light.
+        $("#elliottstatus").html('online on discord'); //make red and green light.
     }else{
 
         $("#elliottstatus").html('offline on discord');
@@ -187,8 +187,8 @@ $(document).ready(function() {
 	
 	var elliottdiscord = function(){
     //https://discordapp.com/api/guilds/461006335341756418/widget.json
-    $.getJSON("https://discordapp.com/api/guilds/461006335341756418/widget.json", function(json) {
-        if (json.id === "461006335341756418") {
+    $.getJSON("https://discordapp.com/api/guilds/551556205776994305/widget.json", function(json) {
+        if (json.id === "551556205776994305") {
             let member = json.members.find(o => o.username === "Elliott");
             if(member){
                 var status = member.status;
