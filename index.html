@@ -25,7 +25,7 @@
 		<p>&mdash; Elliott</p></br>
 		
 		<div id="estatusdiv">
-		<p>Elliott is currently <span id="elliottstatus"></span> </p></br>
+		<p>Elliott is currently <span id="elliottstatus"></span></p></br>
 		</div>
         
 		<ul class="icons">			
@@ -183,7 +183,7 @@ $(document).ready(function() {
 		if (game1 !== "") {
 			$("#elliottstatus").html('online on discord, message him at Elliott#0992. He is playing '+ game1); //make red and green light.
 		} else {
-        $("#elliottstatus").html('online on discord, message him at Elliott#0992'); //make red and green light.
+        $("#elliottstatus").html('online on discord, message him at Elliott#0992' + (game1 !== "")); //make red and green light.
 		}
 		
     }else{
