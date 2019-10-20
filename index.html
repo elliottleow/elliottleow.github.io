@@ -175,10 +175,17 @@ $(document).ready(function() {
 		}
 	}, 100);
 	
+	var game1 = "";
+	
 	var elliotton = function (online) {
     if(online)
     {
-        $("#elliottstatus").html('online on discord'); //make red and green light.
+		if (game != "") {
+			$("#elliottstatus").html('online on discord, message him at Elliott#0992. He is playing '+ game1); //make red and green light.
+		} else {
+        $("#elliottstatus").html('online on discord, message him at Elliott#0992'); //make red and green light.
+		}
+		
     }else{
 
         $("#elliottstatus").html('offline on discord');
@@ -195,6 +202,7 @@ $(document).ready(function() {
                 if(status === "online" || status === "dnd" || status === "idle")
                 {
                     elliotton(true);
+					game1 = game.name;
                 }else{
                     elliotton(false);
                 }
