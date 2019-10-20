@@ -175,8 +175,8 @@ $(document).ready(function() {
 		}
 	}, 100);
 	
-	var game1 = "";
 	
+	var game1 = "";
 	var elliotton = function (online) {
     if(online)
     {
@@ -193,6 +193,7 @@ $(document).ready(function() {
 };
 	
 	var elliottdiscord = function(){
+	
     //https://discordapp.com/api/guilds/461006335341756418/widget.json
     $.getJSON("https://discordapp.com/api/guilds/551556205776994305/widget.json", function(json) {
         if (json.id === "551556205776994305") {
@@ -201,8 +202,9 @@ $(document).ready(function() {
                 var status = member.status;
                 if(status === "online" || status === "dnd" || status === "idle")
                 {
-                    elliotton(true);
+                    
 					game1 = member.game.name;
+					elliotton(true);
                 }else{
                     elliotton(false);
                 }
